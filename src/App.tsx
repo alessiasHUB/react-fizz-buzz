@@ -3,9 +3,9 @@ import { FizzBuzz } from "./components/FizzBuzz";
 function App(): JSX.Element {
   return (
     <>
-    <FizzBuzz />
+      <FizzBuzz />
     </>
-    );
+  );
 }
 
 export default App;
