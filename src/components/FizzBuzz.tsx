@@ -3,7 +3,7 @@ import { isFizzBuzz } from "../utils/isFizzBuzz";
 
 const outputArr: (number | string)[] = [];
 
-export function FizzBuzz() :JSX.Element {
+export function FizzBuzz(): JSX.Element {
   const [currentNum, setNum] = useState<number>(1);
 
   const handleNext = () => {
@@ -15,7 +15,7 @@ export function FizzBuzz() :JSX.Element {
     <>
       <h1>Let's play a little game of FizzBuzz</h1>
       <button onClick={handleNext}>PLAY!</button>
-      <p>Current count: {currentNum-1}</p>
+      <p>Current count: {currentNum - 1}</p>
       <MapOutputArr />
     </>
   );
