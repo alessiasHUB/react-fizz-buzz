@@ -4,18 +4,18 @@ import { isFizzBuzz } from "../utils/isFizzBuzz";
 const outputArr: (number | string)[] = [];
 
 export function FizzBuzz(): JSX.Element {
-  const [currentNum, setNum] = useState<number>(1);
+  const [num, setNum] = useState<number>(1);
 
   const handleNext = () => {
-    setNum(currentNum + 1);
-    outputArr.push(isFizzBuzz(currentNum));
+    setNum(num + 1);
+    outputArr.push(isFizzBuzz(num));
   };
 
   return (
     <>
       <h1>Let's play a little game of FizzBuzz</h1>
       <button onClick={handleNext}>PLAY!</button>
-      <p>Current count: {currentNum - 1}</p>
+      <p>Current count: {num - 1}</p>
       <MapOutputArr />
     </>
   );
