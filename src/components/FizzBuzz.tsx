@@ -1,29 +1,25 @@
 import { useState } from "react";
+import { isFizzBuzz } from "../utils/isFizzBuzz";
 
-export function FizzBuzz() {
+const outputArr: (number | string)[] = [];
+
+export function FizzBuzz() :JSX.Element {
   const [currentNum, setNum] = useState<number>(1);
 
   const handleNext = () => {
     setNum(currentNum + 1);
-    if (currentNum % 3 === 0) {
-      outputArr.push("Fizz");
-    } else if (currentNum % 5 === 0) {
-      outputArr.push("Buzz");
-    } else {
-      outputArr.push(currentNum);
-    }
+    outputArr.push(isFizzBuzz(currentNum));
   };
 
   return (
     <>
       <h1>Let's play a little game of FizzBuzz</h1>
       <button onClick={handleNext}>PLAY!</button>
+      <p>Current count: {currentNum-1}</p>
       <MapOutputArr />
     </>
   );
 }
-
-const outputArr: (number | string)[] = [];
 
 const MapOutputArr = () => {
   return (
